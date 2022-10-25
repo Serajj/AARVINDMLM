@@ -42,7 +42,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">{{__($pdata->name)}} @lang('Page')</h3>
-                <small class="text--primary">@lang('If you face any issue with removing sections, Please click the update button and then remove unnecessary sections and click the update button again.')</small>
+                <small class="text--primary">@lang('If you face any issue with removing sections, Please click the update button and then remove unnecessary sections and click the update button again to update.')</small>
             </div>
 
             <div class="card-body">
