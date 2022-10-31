@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @push('style')
-    <link href="{{url('assets/admin/css/tree.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/admin/css/tree.css')}}" rel="stylesheet">
 @endpush
 
 @section('panel')

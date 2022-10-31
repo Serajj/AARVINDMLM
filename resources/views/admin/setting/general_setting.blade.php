@@ -233,11 +233,11 @@
 @endsection
 
 @push('script-lib')
-    <script src="{{ url('assets/admin/js/spectrum.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/spectrum.js') }}"></script>
 @endpush
 
 @push('style-lib')
-    <link rel="stylesheet" href="{{ url('assets/admin/css/spectrum.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/admin/css/spectrum.css') }}">
 @endpush
 @push('style')
     <style>

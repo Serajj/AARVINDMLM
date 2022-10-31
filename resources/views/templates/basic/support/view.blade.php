@@ -199,7 +199,7 @@
 @endsection
 
 @push('css')
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/ticket.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/ticket.css')}}">
 @endpush
 
 @push('script')

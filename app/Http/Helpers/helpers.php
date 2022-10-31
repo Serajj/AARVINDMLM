@@ -461,7 +461,7 @@ function getImage($image,$size = null)
     $clean = '';
     $size = $size ? $size : 'undefined';
     if (file_exists($image) && is_file($image)) {
-        return asset($image) . $clean;
+        return url($image) . $clean;
     }else{
         return route('placeholderImage',$size);
     }

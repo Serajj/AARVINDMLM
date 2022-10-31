@@ -99,7 +99,7 @@
 @stop
 
 @push('script-lib')
-<script src="{{url('assets/admin/js/jquery-sortable.js')}}"></script>
+<script src="{{asset('assets/admin/js/jquery-sortable.js')}}"></script>
 @endpush
 
 @push('script')

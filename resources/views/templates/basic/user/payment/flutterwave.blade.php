@@ -56,9 +56,9 @@
                     var status = response.tx.status;
                     var chargeResponse = response.tx.chargeResponseCode;
                     if (chargeResponse == "00" || chargeResponse == "0") {
-                        window.location = '{{ url('ipn/flutterwave') }}/' + txref + '/' + status;
+                        window.location = '{{ asset('ipn/flutterwave') }}/' + txref + '/' + status;
                     } else {
-                        window.location = '{{ url('ipn/flutterwave') }}/' + txref + '/' + status;
+                        window.location = '{{ asset('ipn/flutterwave') }}/' + txref + '/' + status;
                     }
                 }
             });

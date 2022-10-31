@@ -1,6 +1,6 @@
 
 <div class="sidebar capsule--rounded bg_img overlay--dark"
-     data-background="{{url('assets/admin/images/sidebar/2.jpg')}}">
+     data-background="{{asset('assets/admin/images/sidebar/2.jpg')}}">
     <button class="res-sidebar-close-btn"><i class="las la-times"></i></button>
     <div class="sidebar__inner">
         <div class="sidebar__logo">
@@ -49,6 +49,12 @@
                     <a href="{{ route('user.binary.summery') }}" class="nav-link">
                         <i class=" menu-icon las la-chart-area"></i>
                         <span class="menu-title">@lang('Binary Summery')</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item {{ menuActive('user.deposit') }}">
+                    <a href="{{ route('user.deposit') }}" class="nav-link">
+                        <i class=" menu-icon las la-credit-card"></i>
+                        <span class="menu-title">@lang('KYC Details')</span>
                     </a>
                 </li>
                 <li class="sidebar-menu-item {{ menuActive('user.deposit') }}">

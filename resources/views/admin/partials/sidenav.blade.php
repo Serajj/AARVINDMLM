@@ -332,7 +332,7 @@
                     </a>
                 </li>
 
-                <li class="sidebar-menu-item {{menuActive('admin.setting.logo_icon')}}">
+                <!-- <li class="sidebar-menu-item {{menuActive('admin.setting.logo_icon')}}">
                     <a href="{{route('admin.setting.logo_icon')}}" class="nav-link">
                         <i class="menu-icon las la-images"></i>
                         <span class="menu-title">@lang('Logo Icon Setting')</span>
@@ -377,7 +377,7 @@
                         <i class="menu-icon las la-language"></i>
                         <span class="menu-title">@lang('Language') </span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="sidebar-menu-item {{menuActive('admin.seo')}}">
                     <a href="{{route('admin.seo')}}" class="nav-link">
@@ -386,12 +386,12 @@
                     </a>
                 </li>
 
-                <li class="sidebar-menu-item {{menuActive('admin.setting.notice')}}">
+                <!-- <li class="sidebar-menu-item {{menuActive('admin.setting.notice')}}">
                     <a href="{{route('admin.setting.notice')}}" class="nav-link">
                         <i class="menu-icon las la-exclamation-triangle"></i>
                         <span class="menu-title">@lang('Notice')</span>
                     </a>
-                </li>
+                </li> -->
 
 
                 <li class="sidebar-menu-item sidebar-dropdown">
@@ -455,19 +455,19 @@
 
                 <li class="sidebar__menu-header">@lang('Frontend Manager')</li>
 
-                <li class="sidebar-menu-item {{menuActive('admin.frontend.templates')}}">
+                <!-- <li class="sidebar-menu-item {{menuActive('admin.frontend.templates')}}">
                     <a href="{{route('admin.frontend.templates')}}" class="nav-link ">
                         <i class="menu-icon la la-html5"></i>
                         <span class="menu-title">@lang('Manage Templates')</span>
                     </a>
-                </li>
+                </li> -->
 
-                <li class="sidebar-menu-item {{menuActive('admin.frontend.manage.pages')}}">
+                <!-- <li class="sidebar-menu-item {{menuActive('admin.frontend.manage.pages')}}">
                     <a href="{{route('admin.frontend.manage.pages')}}" class="nav-link ">
                         <i class="menu-icon la la-list"></i>
                         <span class="menu-title">@lang('Manage Pages')</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="sidebar-menu-item sidebar-dropdown">
                     <a href="javascript:void(0)" class="{{menuActive('admin.frontend.sections*',3)}}">

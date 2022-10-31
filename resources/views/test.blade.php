@@ -1,1 +1,1 @@
-<img src="{{url('assets/images/frontend/breadcrumb/5fc60b6f0b76e1606814575.jpg')}}" alt="dd">
+<img src="{{asset('assets/images/frontend/breadcrumb/5fc60b6f0b76e1606814575.jpg')}}" alt="dd">

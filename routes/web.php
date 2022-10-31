@@ -412,6 +412,9 @@ Route::post('/get/user/position', 'SiteController@userPosition')->name('get.user
 Route::post('subscriber', 'SiteController@subscriberStore')->name('subscriber.store');
 
 Route::get('/contact', 'SiteController@contact')->name('contact');
+Route::get('/about', 'SiteController@about')->name('about');
+Route::get('/ourservices', 'SiteController@ourServices')->name('ourservices');
+
 Route::post('/contact', 'SiteController@contactSubmit')->name('contact.send');
 Route::get('/change/{lang?}', 'SiteController@changeLanguage')->name('lang');
 

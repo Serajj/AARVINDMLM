@@ -8,19 +8,19 @@
     <link rel="shortcut icon" href="{{getImage(imagePath()['logoIcon']['path'] .'/favicon.png', '128x128')}}" type="image/x-icon">
     @include('partials.seo')
 
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/fontawesome-all.min.css')}}">
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/odometer.css')}}">
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/lightcase.css')}}">
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/odometer.css')}}">
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/line-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/odometer.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/lightcase.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/odometer.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/line-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/animate.css')}}">
 
     @stack('style-lib')
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/style.css')}}">
-    <link rel="stylesheet" href="{{url($activeTemplateTrue . 'frontend/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue . 'frontend/css/custom.css')}}">
     @stack('css')
-    <link rel="stylesheet" href='{{ url($activeTemplateTrue."frontend/css/color.php?color=$general->base_color&color2=$general->secondary_color")}}'>
+    <link rel="stylesheet" href='{{ asset($activeTemplateTrue."frontend/css/color.php?color=$general->base_color&color2=$general->secondary_color")}}'>
 
     @stack('style')
 </head>
@@ -48,15 +48,15 @@
 @yield('content')
 
 <!-- ============Footer Section Ends Here============ -->
-<script src="{{url($activeTemplateTrue . 'frontend/js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{url($activeTemplateTrue . 'frontend/js/bootstrap.min.js')}}"></script>
-<script src="{{url($activeTemplateTrue . 'frontend/js/lightcase.js')}}"></script>
-<script src="{{url($activeTemplateTrue . 'frontend/js/swiper.min.js')}}"></script>
-<script src="{{url($activeTemplateTrue . 'frontend/js/viewport.jquery.js')}}"></script>
-<script src="{{url($activeTemplateTrue . 'frontend/js/odometer.min.js')}}"></script>
-<script src="{{url($activeTemplateTrue . 'frontend/js/wow.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue . 'frontend/js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue . 'frontend/js/bootstrap.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue . 'frontend/js/lightcase.js')}}"></script>
+<script src="{{asset($activeTemplateTrue . 'frontend/js/swiper.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue . 'frontend/js/viewport.jquery.js')}}"></script>
+<script src="{{asset($activeTemplateTrue . 'frontend/js/odometer.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue . 'frontend/js/wow.min.js')}}"></script>
 @stack('script-lib')
-<script src="{{url($activeTemplateTrue . 'frontend/js/main.js')}}"></script>
+<script src="{{asset($activeTemplateTrue . 'frontend/js/main.js')}}"></script>
 
 @include('partials.notify')
 @include('partials.plugins')

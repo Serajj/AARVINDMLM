@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="{{ url('assets/admin/css/iziToast.min.css') }}">
-<script src="{{ url('assets/admin/js/iziToast.min.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('assets/admin/css/iziToast.min.css') }}">
+<script src="{{ asset('assets/admin/js/iziToast.min.js') }}"></script>
 
 @if(session()->has('notify'))
     @foreach(session('notify') as $msg)

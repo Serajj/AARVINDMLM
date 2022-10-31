@@ -470,10 +470,10 @@
 
 
 @push('style-lib')
-    <link rel="stylesheet" href="{{ url('assets/admin/css/bootstrap-iconpicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/admin/css/bootstrap-iconpicker.min.css') }}">
 @endpush
 @push('script-lib')
-    <script src="{{ url('assets/admin/js/bootstrap-iconpicker.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/bootstrap-iconpicker.bundle.min.js') }}"></script>
 @endpush
 
 

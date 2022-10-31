@@ -17,7 +17,7 @@
                             <div class="payment-method-header d-flex flex-wrap">
                                 <div class="thumb">
                                     <div class="avatar-preview">
-                                        <div class="profilePicPreview" style="background-image: url('{{ getImage(imagePath()['gateway']['path'].'/'. $gateway->image,imagePath()['gateway']['size']) }}')"></div>
+                                        <div class="profilePicPreview" style="background-image: asset('{{ getImage(imagePath()['gateway']['path'].'/'. $gateway->image,imagePath()['gateway']['size']) }}')"></div>
                                     </div>
                                     <div class="avatar-edit">
                                         <input type="file" name="image" class="profilePicUpload" id="image" accept=".png, .jpg, .jpeg"/>
@@ -93,7 +93,7 @@
                                     <div class="payment-method-header d-flex flex-wrap">
                                         <div class="thumb">
                                             <div class="avatar-preview">
-                                                <div class="profilePicPreview" style="background-image: url('{{getImage(imagePath()['gateway']['path'].'/'.$gateway_currency->image,imagePath()['gateway']['size'])}}')"></div>
+                                                <div class="profilePicPreview" style="background-image: asset('{{getImage(imagePath()['gateway']['path'].'/'.$gateway_currency->image,imagePath()['gateway']['size'])}}')"></div>
                                             </div>
                                             <div class="avatar-edit">
                                                 <input type="file" name="currency[{{ $currency_idx }}][image]" id="image{{ $currency_idx }}" class="profilePicUpload" accept=".png, .jpg, .jpeg"/>
@@ -247,7 +247,7 @@
                                 <div class="thumb">
                                     <div class="avatar-preview">
                                         <div class="profilePicPreview"
-                                             style="background-image: url('{{getImage(imagePath()['gateway']['path'],imagePath()['gateway']['size'])}}')">
+                                             style="background-image: asset('{{getImage(imagePath()['gateway']['path'],imagePath()['gateway']['size'])}}')">
 
                                         </div>
                                     </div>

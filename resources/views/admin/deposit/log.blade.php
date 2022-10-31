@@ -144,8 +144,8 @@
 @endpush
 
 @push('script-lib')
-    <script src="{{ url('assets/admin/js/vendor/datepicker.min.js') }}"></script>
-    <script src="{{ url('assets/admin/js/vendor/datepicker.en.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/vendor/datepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/vendor/datepicker.en.js') }}"></script>
 
 @endpush
 

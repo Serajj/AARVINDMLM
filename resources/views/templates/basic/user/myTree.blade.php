@@ -1,7 +1,7 @@
 @extends($activeTemplate . 'user.layouts.app')
 
 @push('style')
-    <link href="{{url($activeTemplateTrue.'users/css/tree.css')}}" rel="stylesheet">
+    <link href="{{asset($activeTemplateTrue.'users/css/tree.css')}}" rel="stylesheet">
 @endpush
 
 @section('panel')

@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @section('content')
     <div class="page-wrapper default-version">
-        <div class="form-area bg_img" data-background="{{url('assets/admin/images/1.jpg')}}">
+        <div class="form-area bg_img" data-background="{{asset('assets/admin/images/1.jpg')}}">
             <div class="form-wrapper">
                 <h4 class="logo-text mb-15"><strong>@lang('Recover Account')</strong></h4>
                 <form action="{{ route('admin.password.verify-code') }}" method="POST" class="cmn-form mt-30">
@@ -35,7 +35,7 @@
 
 
 @push('script-lib')
-    <script src="{{url('assets/admin/js/jquery.inputLettering.js')}}"></script>
+    <script src="{{asset('assets/admin/js/jquery.inputLettering.js')}}"></script>
 @endpush
 
 @push('style')

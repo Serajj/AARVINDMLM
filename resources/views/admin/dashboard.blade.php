@@ -578,8 +578,8 @@
 
 @push('script')
 
-    <script src="{{url('assets/admin/js/vendor/apexcharts.min.js')}}"></script>
-    <script src="{{url('assets/admin/js/vendor/chart.js.2.8.0.js')}}"></script>
+    <script src="{{asset('assets/admin/js/vendor/apexcharts.min.js')}}"></script>
+    <script src="{{asset('assets/admin/js/vendor/chart.js.2.8.0.js')}}"></script>
 
     <script>
         'use strict';

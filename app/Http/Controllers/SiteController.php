@@ -85,6 +85,20 @@ class SiteController extends Controller
         return view($this->activeTemplate . 'contact', $data);
     }
 
+    public function about()
+    {
+        $data['page_title'] = "About Us";
+        $data['contact'] = Frontend::where('data_keys', 'contact_us.content')->first();
+        return view($this->activeTemplate . 'about', $data);
+    }
+
+    public function ourServices()
+    {
+        $data['page_title'] = "Our Services";
+        $data['contact'] = Frontend::where('data_keys', 'contact_us.content')->first();
+        return view($this->activeTemplate . 'ourservices', $data);
+    }
+
 
 
     public function contactSubmit(Request $request)

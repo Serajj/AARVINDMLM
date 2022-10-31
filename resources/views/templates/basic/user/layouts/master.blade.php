@@ -8,31 +8,31 @@
     <!-- site favicon -->
     <link rel="shortcut icon" type="image/png" href="{{getImage(imagePath()['logoIcon']['path'] .'/favicon.png')}}">
 
-    <link rel="stylesheet" href="{{ url($activeTemplateTrue.'users/css/vendor/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset($activeTemplateTrue.'users/css/vendor/bootstrap.min.css') }}">
     <!-- bootstrap toggle css -->
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/vendor/bootstrap-toggle.min.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/vendor/bootstrap-toggle.min.css')}}">
     <!-- fontawesome 5  -->
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/all.min.css')}}">
     <!-- line-awesome webfont -->
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/line-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/line-awesome.min.css')}}">
 
     @stack('style-lib')
 
     <!-- custom select box css -->
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/vendor/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/vendor/nice-select.css')}}">
     <!-- code preview css -->
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/vendor/prism.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/vendor/prism.css')}}">
     <!-- select 2 css -->
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/vendor/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/vendor/select2.min.css')}}">
 
     <!-- bootstrap-pincode css -->
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/vendor/bootstrap-pincode-input.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/vendor/bootstrap-pincode-input.css')}}">
     <!-- dashdoard main css -->
 
     @stack('style-lib')
 
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/app.css')}}">
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'users/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/app.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'users/css/custom.css')}}">
 
     @stack('style')
 
@@ -46,32 +46,32 @@
 
 
 <!-- jQuery library -->
-<script src="{{url($activeTemplateTrue.'users/js/vendor/jquery-3.5.1.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'users/js/vendor/jquery-3.5.1.min.js')}}"></script>
 <!-- bootstrap js -->
-<script src="{{url($activeTemplateTrue.'users/js/vendor/bootstrap.bundle.min.js')}}"></script></script>
+<script src="{{asset($activeTemplateTrue.'users/js/vendor/bootstrap.bundle.min.js')}}"></script></script>
 <!-- bootstrap-toggle js -->
-<script src="{{url($activeTemplateTrue.'users/js/vendor/bootstrap-toggle.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'users/js/vendor/bootstrap-toggle.min.js')}}"></script>
 
 <!-- slimscroll js for custom scrollbar -->
-<script src="{{url($activeTemplateTrue.'users/js/vendor/jquery.slimscroll.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'users/js/vendor/jquery.slimscroll.min.js')}}"></script>
 <!-- custom select box js -->
-<script src="{{url($activeTemplateTrue.'users/js/vendor/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'users/js/vendor/jquery.nice-select.min.js')}}"></script>
 
 
 @include('partials.notify')
 
 @stack('script-lib')
 
-<script src="{{ url($activeTemplateTrue.'users/js/nicEdit.js') }}"></script>
+<script src="{{ asset($activeTemplateTrue.'users/js/nicEdit.js') }}"></script>
 
 <!-- code preview js -->
-<script src="{{url($activeTemplateTrue.'users/js/vendor/prism.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'users/js/vendor/prism.js')}}"></script>
 <!-- seldct 2 js -->
-<script src="{{url($activeTemplateTrue.'users/js/vendor/select2.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'users/js/vendor/select2.min.js')}}"></script>
 <!-- data-table js -->
-<script src="{{url($activeTemplateTrue.'users/js/vendor/datatables.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'users/js/vendor/datatables.min.js')}}"></script>
 <!-- main js -->
-<script src="{{url($activeTemplateTrue.'users/js/app.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'users/js/app.js')}}"></script>
 
 {{-- LOAD NIC EDIT --}}
 <script>

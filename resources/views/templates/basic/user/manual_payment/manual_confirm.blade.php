@@ -84,9 +84,9 @@
 @endsection
 
 @push('style-lib')
-    <link rel="stylesheet" href="{{url($activeTemplateTrue.'/users/css/bootstrap-fileinput.css')}}">
+    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'/users/css/bootstrap-fileinput.css')}}">
 @endpush
 
 @push('script-lib')
-    <script src="{{url($activeTemplateTrue.'/users/js/bootstrap-fileinput.js')}}"></script>
+    <script src="{{asset($activeTemplateTrue.'/users/js/bootstrap-fileinput.js')}}"></script>
 @endpush
