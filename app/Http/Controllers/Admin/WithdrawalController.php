@@ -10,6 +10,7 @@ use App\Models\WithdrawMethod;
 use App\Models\Withdrawal;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Models\KycDetail;
 
 class WithdrawalController extends Controller
 {
@@ -21,6 +22,16 @@ class WithdrawalController extends Controller
         $type = 'pending';
         return view('admin.withdraw.withdrawals', compact('page_title', 'withdrawals', 'empty_message','type'));
     }
+
+    public function kyclist()
+    {
+        $page_title = 'KYC Details';
+        $withdrawals = KycDetail::latest()->paginate(getPaginate());
+        $empty_message = 'No withdrawal is pending';
+        $type = 'pending';
+        return view('admin.withdraw.kyclist', compact('page_title', 'withdrawals', 'empty_message','type'));
+    }
+
     public function approved()
     {
         $page_title = 'Approved Withdrawals';

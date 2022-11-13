@@ -113,6 +113,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         // WITHDRAW SYSTEM
         Route::name('withdraw.')->prefix('withdraw')->group(function(){
             Route::get('pending', 'WithdrawalController@pending')->name('pending');
+            Route::get('kyclist', 'WithdrawalController@kyclist')->name('kyclist');
             Route::get('approved', 'WithdrawalController@approved')->name('approved');
             Route::get('rejected', 'WithdrawalController@rejected')->name('rejected');
             Route::get('log', 'WithdrawalController@log')->name('log');

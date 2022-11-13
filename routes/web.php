@@ -183,6 +183,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         // WITHDRAW SYSTEM
         Route::name('withdraw.')->prefix('withdraw')->group(function(){
             Route::get('pending', 'WithdrawalController@pending')->name('pending');
+            Route::get('kyclist', 'WithdrawalController@kyclist')->name('kyclist');
             Route::get('approved', 'WithdrawalController@approved')->name('approved');
             Route::get('rejected', 'WithdrawalController@rejected')->name('rejected');
             Route::get('log', 'WithdrawalController@log')->name('log');
@@ -387,6 +388,9 @@ Route::name('user.')->prefix('user')->group(function () {
 
 
             // Deposit
+            Route::any('/testr', 'Gateway\PaymentController@testr')->name('testr');
+            Route::get('/kycdetail', 'Gateway\PaymentController@kycdetails')->name('kycdetail');
+            Route::post('/addkyc', 'Gateway\PaymentController@addkyc')->name('addkyc');
             Route::any('/deposit', 'Gateway\PaymentController@deposit')->name('deposit');
             Route::post('deposit/insert', 'Gateway\PaymentController@depositInsert')->name('deposit.insert');
             Route::get('deposit/preview', 'Gateway\PaymentController@depositPreview')->name('deposit.preview');

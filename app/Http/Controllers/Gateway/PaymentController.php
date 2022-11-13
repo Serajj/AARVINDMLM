@@ -9,9 +9,11 @@ use App\Models\GatewayCurrency;
 use App\Models\GeneralSetting;
 use App\Models\Transaction;
 use App\Models\User;
+use App\Models\KycDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
+use Image;
 
 class PaymentController extends Controller
 {
@@ -27,6 +29,72 @@ class PaymentController extends Controller
         })->with('method')->orderby('method_code')->get();
         $page_title = 'Deposit Methods';
         return view($this->activeTemplate . 'user.payment.deposit', compact('gatewayCurrency', 'page_title'));
+    }
+
+    public function kycdetails()
+    {
+        $user = Auth::user();
+        // KycDetail
+        $kycdetail = KycDetail::where('user_id',$user->id)->first();
+        $gatewayCurrency = GatewayCurrency::whereHas('method', function ($gate) {
+            $gate->where('status', 1);
+        })->with('method')->orderby('method_code')->get();
+        $page_title = 'KYC Details';
+        return view($this->activeTemplate . 'user.payment.kycdetail', compact('gatewayCurrency', 'page_title','kycdetail'));
+    }
+    public function testr(Request $request)
+    {
+        
+       return view('test');
+    }
+    public function addkyc(Request $request)
+    {
+        $user = Auth::user();
+        // KycDetail
+        $kycdetail = KycDetail::where('user_id',$user->id)->first();
+        if(!$kycdetail){
+            $kycdetail = new KycDetail();
+            $kycdetail->user_id=$user->id;
+        }
+        $kycdetail->bank_name = $request->bank_name;
+        $kycdetail->account_no = $request->account_no;
+        $kycdetail->ifsc_code = $request->ifsc_code;
+        $kycdetail->branch = $request->branch;
+        $kycdetail->photo_id_no = $request->photo_id_no;
+        $kycdetail->upi = $request->upi;
+        if ($request->hasFile('passbook_img')) {
+        
+            $image = $request->file('passbook_img');
+            $filename = time() . '_' . $user->username . '.jpg';
+            $location = 'assets/images/user/kyc/' . $filename;
+            $kycdetail->passbook_image = $filename;
+
+            $path = './assets/images/user/kyc/';
+            // $link = $path . $user->image;
+            // if (file_exists($link)) {
+            //     @unlink($link);
+            // }
+            $image = Image::make($image);
+            $image->save($location);
+        }
+
+        if ($request->hasFile('id_image')) {
+            $image = $request->file('id_image');
+            $filename = time() . '_id_' . $user->username . '.jpg';
+            $location = 'assets/images/user/kyc/' . $filename;
+            $kycdetail->photo_id_mage = $filename;
+
+            $path = './assets/images/user/kyc/';
+            // $link = $path . $user->image;
+            // if (file_exists($link)) {
+            //     @unlink($link);
+            // }
+            $image = Image::make($image);
+            $image->save($location);
+        }
+        $kycdetail->save();
+        $notify[] = ['success', 'KYC Updated successfully.'];
+        return back()->withNotify($notify);
     }
 
     public function depositInsert(Request $request)
